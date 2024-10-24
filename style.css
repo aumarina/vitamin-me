@@ -1,0 +1,1178 @@
+/* ________________________1________________________ */
+/* ________2________ */
+/* __3__ */
+/* 4 */
+/* .5. */
+
+/* COLOUR */
+/* white: #FEFEFF */
+/* beige: FFF0D7 */
+/* coffee: 3D2501 */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #FEFEFF;
+}
+
+.grid {
+  display: none;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10px;
+  padding: 40px;
+}
+
+.cell {
+/*   background-color: rgb(220,220,220); */
+  background-color: transparent;
+/*   height: 100px; */
+}
+
+/* ________________________GRID________________________ */
+/* default - small devices */
+[class*="col"] {
+  grid-column-end: span 12;
+}
+
+/* up to 600px typically phone */
+@media only screen and (max-width: 600px) {
+  .sm1 {
+    grid-column-end: span 12;
+  }
+  
+  .sm2 {
+    grid-column-end: span 6;
+  }
+  
+  .sm3 {
+    grid-column-end: span 4;
+  }
+  
+  .sm4 {
+    grid-column-end: span 3;
+  }
+  
+  .sm6 {
+    grid-column-end: span 2;
+  }
+  
+  .sm12 {
+    grid-column-end: span 1;
+  }
+
+  .smspan8 {
+    grid-column-end: span 8;
+  }
+
+/*  show all buttons float to right  */
+  .openButtons {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+/*  write dropdown button  */
+  #typeButton {
+    float: none!important;
+  }
+
+/*  write buttons  */
+  #copyAndGenerate, #refreshButtonContainer {
+    text-align: center;
+  }
+
+/* write prompt text */
+  #contentTextQuestion {
+    text-align: center;
+  }
+
+/*  focus content  */
+  #Focus {
+    grid-template-rows: max-content auto max-content 50px!important;
+    overflow-y: hidden;
+  }
+  
+  #focusSunContainer {
+    text-align: center!important;
+  }
+
+  #focusSun {
+    position: fixed;
+    bottom: 230px;
+    left: calc(50vw - 100px);
+/*     transform: translateY(-30px); */
+/*     top: 45vh; */
+/*     left: 32vw; */
+  }
+}
+
+
+/* 601px to 1024px typically tablet */
+@media only screen and (min-width: 601px) {
+  .md1 {
+    grid-column-end: span 12;
+  }
+  
+  .md2 {
+    grid-column-end: span 6;
+  }
+  
+  .md3 {
+    grid-column-end: span 4;
+  }
+  
+  .md4 {
+    grid-column-end: span 3;
+  }
+  
+  .md6 {
+    grid-column-end: span 2;
+  }
+  
+  .md12 {
+    grid-column-end: span 1;
+  }
+
+  .mdspan9 {
+    grid-column-end: span 9;
+  }
+  
+  .mdspan10 {
+    grid-column-end: span 10;
+  }
+
+/*  show all buttons float to right  */
+  .openButtons {
+    position: relative;
+    bottom: 45px;
+    float: right;
+  }
+}
+
+
+/* above 1025px typically desktop */
+@media only screen and (min-width: 1025px) {
+  .col1 {
+    grid-column-end: span 12;
+  }
+  
+  .col2 {
+    grid-column-end: span 6;
+  }
+  
+  .col3 {
+    grid-column-end: span 4;
+  }
+  
+  .col4 {
+    grid-column-end: span 3;
+  }
+  
+  .col6 {
+    grid-column-end: span 2;
+  }
+  
+  .col12 {
+    grid-column-end: span 1;
+  }
+
+  .span9 {
+    grid-column-end: span 9;
+  }
+  
+  .span10 {
+    grid-column-end: span 10;
+  }
+}
+
+/* ________________________LAYOUT________________________ */
+/* ________BOTTOM DIV________ */
+.bottomDiv {
+  display: block;
+  margin-bottom: 75px;
+}
+
+/* ________________________LOADING SCREEN________________________ */
+#loadingScreenContainer {
+/*   display: flex; */
+/*   align-items: center; */
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #FFFCF7;
+  z-index: 201;
+  overflow: hidden;
+  animation-fill-mode: both;
+}
+
+#loadingContent {
+  animation-delay: 500ms;
+  animation-fill-mode: both;
+  position: relative;
+  top: calc(50vh - 75px);
+}
+
+#loadingLogoIcon {
+  max-width: 100px;
+  border-radius: 20px;
+}
+
+#loadingAppTitle {
+  margin-top: 20px;
+}
+
+
+/* ________________________NAVIGATION TABS________________________ */
+nav {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 200;
+  background-color: #FEFBF4;
+/*   border-top: 1px solid black; */
+}
+
+.navtabs {
+/*  makes background colour only apply to content box, not to border  */
+  background-clip: content-box;
+  padding: 10px;
+  border: none;
+  width: 20%;
+  height: 75px;
+  float: left;
+  background-color: #FEFBF4;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-top: 0.9px solid black;
+  
+}
+
+/* ________ICONS________ */
+/* __ALL__ */
+/* TRANSFORMATION */
+#affirmations2, #write2, #meditate2, #focus2, #home2 {
+  transform: scale(3);
+  position: relative;
+  top: 4px;
+  height: 20px;
+}
+
+/* PROPERTIES */
+/* .DEFAULT. */
+#affirmations2Icon, #write2Icon, #meditate2Icon, #focus2Icon, #home2Icon {
+  opacity: 50%;
+  transition: all 0.3s;
+}
+
+.affirmations2Text, .write2Text, .meditate2Text, .focus2Text, .home2Text {
+  opacity: 0%;
+  transition: all 0.3s;
+/*   font-family: 'Crimson Text', sans-serif; */
+  font-family: 'Koh Santepheap', serif;
+  font-size: 48px;
+}
+
+/* .HOVER. */
+#affirmationsButton:hover #affirmations2Icon, #affirmationsButton:hover .affirmations2Text, #writeButton:hover #write2Icon, #writeButton:hover .write2Text, #meditateButton:hover #meditate2Icon, #meditateButton:hover .meditate2Text, #focusButton:hover #focus2Icon, #focusButton:hover .focus2Text, #defaultOpen:hover #home1Icon, #defaultOpen:hover #home2Icon, #defaultOpen:hover .home2Text {
+  opacity: 100%;
+}
+
+/* .ACTIVE. */
+.navtabs.active #affirmations2Icon, .navtabs.active .affirmations2Text, .navtabs.active #write2Icon, .navtabs.active .write2Text, .navtabs.active #meditate2Icon, .navtabs.active .meditate2Text, .navtabs.active #focus2Icon, .navtabs.active .focus2Text, .navtabs.active #home1Icon, .navtabs.active #home2Icon, .navtabs.active .home2Text {
+  opacity: 100%;
+}
+
+/* __HOME__ */
+#home1 {
+  transform: scale(4);
+  position: relative;
+/*   top: 6px; */
+  height: 20px;
+}
+
+#home1Icon {
+  opacity: 50%;
+  transition: all 0.3s;
+}
+
+/* ________________________ANIMATIONS________________________ */
+/* ________FADE IN________ */
+.fadeIn {
+  animation: fadeIn 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* ________FADE OUT________ */
+.fadeOut {
+  animation: fadeOut 1s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 100%;
+  }
+  
+  100% {
+    opacity: 0%;
+  }
+}
+
+/* ________FADE IN AND OUT________ */
+.fadeInOut {
+  animation: fadeInOut 2s;
+  animation-iteration-count: 1;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0%;
+  }
+  
+  25% {
+    opacity: 100%;
+  }
+
+  75% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+/* ________FADE IN FROM LEFT________ */
+.fadeInLeft {
+  animation: fadeInLeft 1s;
+  animation-iteration-count: 1;
+  position: relative;
+}
+
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0%;
+  }
+  
+  100% {
+    transform: translateX(0px);
+    opacity: 100%;
+  }
+}
+
+/* ________ROTATE 90 DEG CLOCKWISE________ */
+.rotate90Clockwise {
+  animation: rotate90Clockwise 1s;
+  animation-iteration-count: 1;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+
+@keyframes rotate90Clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(90deg);
+  }
+}
+
+.lightBlueBackground {
+  animation: lightBlueBackground 1s;
+  animation-iteration-count: 1;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+
+@keyframes lightBlueBackground {
+  0% {
+    background-color: transparent;
+  }
+  
+  100% {
+    background-color: #F0F8FD;
+  }
+}
+
+/* ________________________TEXT________________________ 
+/* small - page title on top of every page */
+/* h1 - welcome message (home) */
+/* h2 - section headings (home, meditate) */
+/* h3 - prompt generator (write) */
+/* h4 - to do list, focus timer (focus) */
+/* h5 - subheadings (meditate) */
+/* p - normal body text */
+
+/* MINIMUM TEXT SIZE: 18PX */
+
+.pageTitleTop {
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.5em;
+}
+
+h2 {
+  margin: 15px 0px;
+  font-family: 'Crimson Text', serif;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.5em;
+}
+
+h5 {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-size: 21px;
+  margin: 0;
+}
+
+
+p {
+  margin: 8px 0px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+small {
+    font-family: 'Koh Santepheap', serif;
+  display: inline-block!important;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.errorMessages {
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* ________________________BUTTONS________________________ */
+.appButtons {
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  background-color: white;
+  transition: all 0.3s;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+}
+
+.unclickable {
+  pointer-events: none;
+  border: none;
+  opacity: 30%;
+  background-color: #FFF0D7;
+}
+
+/* icons */
+.icon {
+  width: 15px;
+  height: 15px;
+  padding-right: 9px;
+  padding-bottom: 3px;
+  vertical-align: middle;
+}
+
+#playImage1, #playImage2, #stopImage1, #stopImage2 {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.appButtons:hover {
+  background-color: #FEF7EB;
+}
+
+label, .label, #backToTopButton {
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  transition: all 0.3s;
+  color: #B2710D;
+  opacity: 70%;
+}
+
+label:hover .labelText, .label:hover .labelText, #backToTopButton:hover #backToTopButtonText {
+  text-decoration: underline;
+}
+label:hover, .label:hover, #backToTopButton:hover {
+  opacity: 100%;
+}
+
+
+
+/* ________________________SLIDE-IN CONTENT________________________ */
+.slideinCheckboxes {
+  display: none;
+}
+
+.openButtons, .closeButtons {
+  cursor: pointer;
+}
+
+.closeButtons {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.slideinCheckboxes + label, .slideinContent {
+  transition: right 0.4s;
+}
+
+.slideinCheckboxes:checked + label {
+  right: 100vw;
+}
+
+#meditationTime, #meditationMood  {
+  animation-delay: 1000ms;
+  animation-fill-mode: backwards;
+}
+
+#meditationTimeCheckbox:checked ~ #meditationTime, #meditationMoodCheckbox:checked ~ #meditationMood {
+  right: 0;
+}
+
+.slideinContent {
+  box-sizing: border-box;
+  padding: 40px;
+  margin: 0;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: -100vw;
+  bottom: 0;
+  z-index: 100;
+  text-align: left;
+  background: #FFFCF7;
+  overflow-y: scroll;
+}
+
+/* ________________________HOME________________________ */
+/* ________AFFIRMATIONS________ */
+#homeAffirmationsSection {
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+#homeAffirmationImage {
+  max-width: 500px;
+}
+
+/* ________MEDITATE________ */
+#homeMeditateSection {
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+#homeMeditationAudiosText {
+  display: inline;
+}
+
+#homeMeditationAudiosTitle {
+  font-weight: 500;
+}
+
+/* ________BUTTONS________ */
+#homeMeditationPlayButton {
+  display: inline;
+}
+
+#homeMeditationPauseButton {
+  display: none;
+}
+
+#homeMeditationPlayImage2, #homeMeditationPauseImage2, #homeMeditationStopImage2 {
+  display: none;
+}
+
+#homeMeditationPlayButton:hover #homeMeditationPlayImage2, #homeMeditationPauseButton:hover #homeMeditationPauseImage2, #homeMeditationStopButton:hover #homeMeditationStopImage2 {
+  display: inline;
+}
+
+#homeMeditationPlayButton:hover #homeMeditationPlayImage1, #homeMeditationPauseButton:hover #homeMeditationPauseImage1, #homeMeditationStopButton:hover #homeMeditationStopImage1 {
+  display: none;
+}
+
+/* ________________________AFFIRMATIONS________________________ */
+/* ________MODALS________ */
+.affirmationImages {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+/* ________ANIMATIONS________ */
+#affirmationSlot1 {
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+#affirmationSlot5 {
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+#affirmationSlot9 {
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+
+#affirmationSlot13 {
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
+}
+
+/* ________BUTTONS________ */
+/* __REFRESH__ */
+#refreshImage2 {
+  display: none;
+}
+
+#affirmationsRefreshButton:hover #refreshImage2 {
+  display: inline;
+}
+
+#affirmationsRefreshButton:hover #refreshImage1 {
+  display: none;
+}
+
+/* __BACK TO TOP__ */
+#affirmationsBackToTopContainer {
+  text-align: center;
+}
+#backToTopButton {
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+}
+
+/* ________________________WRITE________________________ */
+/* ________LAYOUT________ */
+#Write {
+  box-sizing: border-box;
+  grid-template-rows: max-content max-content auto;
+  height: calc(100vh - 75px);
+}
+
+/* ________ANIMATIONS________ */
+#contentContainer {
+  margin-top: 20px;
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+#copyAndGenerate {
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+/* ________BUTTONS________ */
+/* __DROPDOWN__ */
+#typeButton {
+  float: right;
+}
+
+.dropdownOptions {
+  background-color: white;
+  background-image: none;
+  height: 50px;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+#typeImage2 {
+  display: none;
+}
+
+#typeButton:hover #typeImage2 {
+  display: inline;
+}
+
+#typeButton:hover #typeImage1 {
+  display: none;
+}
+
+/* __COPY AND GENERATE__ */
+#copyImage2 {
+  display: none;
+}
+
+#copyButton:hover #copyImage2 {
+  display: inline;
+}
+
+#copyButton:hover #copyImage1 {
+  display: none;
+}
+
+/* generate button */
+#generateImage2 {
+  display: none;
+}
+
+#generateButton:hover #generateImage2 {
+  display: inline;
+}
+
+#generateButton:hover #generateImage1 {
+  display: none;
+}
+
+/* ________________________MEDITATE________________________ */
+/* ________ANIMATIONS________ */
+#meditationMorningCard {
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+
+#meditationNightCard {
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+#meditationHappinessCard {
+  animation-delay: 500ms;
+  animation-fill-mode: backwards;
+}
+
+#meditationStressCard {
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
+}
+
+.meditateMoodSection {
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+
+/* ________BUTTONS________ */
+.meditateIcon {
+  width: 17px;
+  margin: 0;
+  padding: 0;
+}
+
+.meditationAudios {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #FEF7EB;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.meditationAudios:hover {
+  background-color: #FFF0D7;
+}
+
+.meditationAudiosButtons {
+  cursor: pointer;
+  margin: 0;
+  padding: 0px 10px 0px 0px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  transition: all 0.3s;
+}
+
+.meditationAudiosText {
+  display: inline;
+}
+
+.meditationAudiosTitles {
+  font-weight: 500;
+}
+
+.meditationPlayButtons {
+  display: inline;
+}
+
+.meditationPauseButtons {
+  display: none;
+}
+
+.meditationPlayImages2, .meditationPauseImages2, .meditationStopImages2 {
+  display: none;
+}
+
+.meditationPlayButtons:hover .meditationPlayImages2, .meditationPauseButtons:hover .meditationPauseImages2, .meditationStopButtons:hover .meditationStopImages2 {
+  display: inline;
+}
+
+.meditationPlayButtons:hover .meditationPlayImages1, .meditationPauseButtons:hover .meditationPauseImages1, .meditationStopButtons:hover .meditationStopImages1 {
+  display: none;
+}
+
+.meditationCards {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #FEF7EB;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.meditationCards:hover {
+  background-color: #FFF0D7;
+}
+
+.meditationCardsText {
+  display: block;
+}
+
+.meditationCards:hover .meditationCardsTimes {
+  display: none;
+}
+
+.meditationCardsButtons {
+  display: none;
+  margin: 9px 0px;
+}
+
+.meditationCards:hover .meditationCardsButtons {
+  display: block;
+}
+
+.meditationCardsIcons {
+  max-width: 50px;
+  float: right;
+}
+
+.meditationCardsTimes {
+  color: #B2710D;
+}
+
+/* ________________________FOCUS________________________ */
+/* ________ANIMATIONS________ */
+#focusTimerSection {
+  animation-delay: 200ms;
+  animation-fill-mode: backwards;
+}
+#focusStartStopSection {
+  animation-delay: 400ms;
+  animation-fill-mode: backwards;
+}
+
+#plant {
+  animation-delay: 100ms;
+  animation-fill-mode: backwards;
+}
+
+#focusSunContainer {
+  animation-delay: 300ms;
+  animation-fill-mode: backwards;
+}
+
+/* ________LAYOUT________ */
+#Focus {
+  box-sizing: border-box;
+  /* specify the height of each row in the grid */
+  grid-template-rows: max-content auto 50px;
+  
+  /* START OF SOURCED CODE */
+    /* Source: https://www.w3schools.com/cssref/func_calc.php */
+    /* Click on the ‘Try it Yourself »’ button from the example on the page */
+  height: calc(100vh - 75px);
+  /* END OF SOURCED CODE */
+}
+
+#focusTaskSection {
+/*   display: flex; */
+/*   flex-direction: column; */
+/*   justify-content: center; */
+  z-index: 197;
+}
+
+#focusTimerSection, #focusStartStopSection {
+  position: fixed;
+  bottom: 115px;
+}
+
+#focusTimerSection {
+  z-index: 198;
+  color: white;
+}
+
+#focusStartStopSection {
+  z-index: 199;
+  text-align: right;
+  right: 40px;
+}
+
+.focusTimerInputArea {
+  display: inline-block;
+}
+
+/* ________SUN________ */
+#focusSunContainer {
+  text-align: right;
+}
+
+#focusSun {
+  width: 200px;
+}
+
+/* ________BUTTONS________ */
+ #addButton, .toDoButtons, .focusTimerButtons {
+  cursor: pointer;
+}
+
+
+/* ________TO DO LIST________ */
+.inline {
+  display: inline;
+}
+
+/* __TASKS__ */
+.toDoTaskEntire {
+  display: block;
+  margin-bottom: 5px;
+  transition: all 0.3s;
+  cursor: default;
+}
+
+.toDoTaskEntire:hover {
+  opacity: 50%;
+}
+
+/* __BUTTONS__ */
+
+/* TASK TEXTBOX */
+#focusToDoTextbox {
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  border-radius: 0px;
+  opacity: 50%;
+  transition: all 0.3s;
+  color: black;
+}
+
+#focusToDoTextbox:hover {
+  opacity: 100%;
+}
+
+#focusToDoTextbox:focus {
+  opacity: 100%;
+  outline: none;
+}
+
+/* ADD TASK BUTTON */
+#addImage2 {
+  display: none;
+}
+
+#addButton {
+  margin: 0;
+  padding: 0 9px 0 0;
+  background-color: transparent;
+  color: black;
+  border: none;
+  transition: all 0.3s;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+}
+
+#addButton:hover #addImage2 {
+  display: inline;
+}
+
+#addButton:hover #addImage1 {
+  display: none;
+}
+
+/* REMOVE TASK BUTTONS */
+.removeImage2 {
+  display: none;
+}
+
+.removeButtons {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  color: black;
+  border: none;
+  transition: all 0.3s;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+}
+
+.removeButtons:hover {
+  cursor: pointer;
+}
+
+.removeButtons:hover .removeImage2 {
+  display: inline;
+}
+
+.removeButtons:hover .removeImage1 {
+  display: none;
+}
+
+/* ________TIMER________ */
+#dateLoadedMilliseconds {
+  display: none;
+}
+
+#focusTaskError, #focusError {
+  display: none;
+}
+
+#focusCountdown {
+  display: none;
+  font-family: 'Mulish', sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+/* __BUTTONS AND TEXTBOXES__ */
+/* HOUR AND MINUTE TEXTBOXES */
+#focusHourTextbox, #focusMinuteTensTextbox, #focusMinuteOnesTextbox {
+  margin: 0;
+  border: none;
+  box-sizing: border-box;
+  display: inline;
+  width: 25px;
+  
+  background: transparent;
+  color: white;
+
+  font-size: 18px;
+  border-radius: 0px;
+  opacity: 50%;
+  transition: all 0.3s;
+  vertical-align: middle;  
+}
+
+#focusHourTextbox::placeholder, #focusMinuteTensTextbox::placeholder, #focusMinuteOnesTextbox::placeholder {
+  font-family: 'Mulish', sans-serif;
+  text-align: center;
+  color: white;
+}
+
+ input[type=number] {
+   font-family: 'Mulish', sans-serif;
+   text-align: center;
+ }
+
+/* START OF SOURCED CODE */
+  /* Source: https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+  /* Click on the ‘Try it Yourself »’ button from the example on the page */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* END OF SOURCED CODE */
+
+#focusHourTextbox:hover, #focusMinuteTensTextbox:hover, #focusMinuteOnesTextbox:hover {
+  opacity: 100%;
+}
+
+#focusHourTextbox:focus, #focusMinuteTensTextbox:focus, #focusMinuteOnesTextbox:focus {
+  opacity: 100%;
+  outline: none;
+}
+
+/* PLAY AND STOP BUTTONS */
+.focusTimerButtons {
+  margin: 0;
+  padding: 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  transition: all 0.3s;
+  font-family: 'Mulish', sans-serif;
+  font-size: 18px;
+  opacity: 50%;
+}
+
+.focusTimerButtons:hover {
+  opacity: 100%;
+}
+
+#playImage2, #stopImage2 {
+  display: none;
+}
+
+#startButton:hover #playImage2, #stopButton:hover #stopImage2 {
+  display: inline;
+}
+
+#startButton:hover #playImage1, #stopButton:hover #stopImage1 {
+  display: none;
+}
+
+/* __PLANT__ */
+#plant {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0 auto;
+  bottom: 110px;
+  text-align: center;
+  z-index: 196;
+}
+
+#plantImage {
+  width: 100px;
+}
+
+#focusBackground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0;
+  bottom: 0;
+  height: 300px;
+  background: url("img/focus/focusBackground.svg");
+  background-repeat: repeat-x;
+  z-index: 195;
+}
+
+#focusBackgroundImage {
+  width: 100%;
+}

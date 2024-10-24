@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Vitamin ME</title>
+  <link rel="icon" href="img/logoPill.ico">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Gotu&family=Koh+Santepheap:wght@300;400;700;900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body onload="theClock(); theAffirmationAndMeditation(); loadingScreen();">
+  <!--   ________________________LOADING SCREEN________________________ -->
+  <div id="loadingScreenContainer">
+    <div class="fadeIn" id="loadingContent">
+      <img src="img/logo.svg" id="loadingLogoIcon">
+      <br>
+      <p id="loadingAppTitle">Vitamin <b>ME</b></p>
+    </div>
+  </div>
+
+  <!--   ________________________NAVIGATION________________________ -->
+  <nav>
+    <button class="navtabs" onclick="openPage(event, 'Affirmations');" id="affirmationsButton">
+      <svg id="affirmations2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <text id="affirmations2Text" class="affirmations2Text" transform="translate(51.7 174.41) rotate(-86.49)">
+          <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(53.4 144.63) rotate(-69.82)">
+          <tspan x="0" y="0">F</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(62.54 118.95) rotate(-53.89)">
+          <tspan x="0" y="0">F</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(79.37 96.96) rotate(-42.39)">
+          <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(87.11 88.01) rotate(-29.4)">
+          <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(114.77 71.38) rotate(-9.07)">
+          <tspan x="0" y="0">M</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(151.83 65.71) rotate(10.32)">
+          <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(178.03 69.94) rotate(25.09)">
+          <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(202.81 82.26) rotate(36.66)">
+          <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(213.18 87.94) rotate(50.34)">
+          <tspan x="0" y="0">O</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(235.6 114.67) rotate(69.87)">
+          <tspan x="0" y="0">N</tspan>
+        </text>
+        <text class="affirmations2Text" transform="translate(246.87 144.97) rotate(87.96)">
+          <tspan x="0" y="0">S</tspan>
+        </text>
+        <g id="affirmations2Icon">
+          <path
+            d="M149.38,231.88l.15-.73-.03-.02-.16,.75c-7.71-1.63-27.48-6.9-44.35-20.59-17.67-14.33-26.63-33.08-26.63-55.74,0-30.19,14.24-48.52,38.08-49.04,12.74-.28,22.88,5.56,29.42,16.87,1.77,3.06,3.07,6.18,4.03,9.01,.96-2.84,2.26-5.96,4.03-9.01,6.54-11.31,16.69-17.15,29.42-16.87,23.85,.52,38.08,18.85,38.08,49.04,0,22.65-8.96,41.41-26.63,55.74-16.88,13.68-36.64,18.96-44.35,20.59h0s0,0,0,0h0s-.54-.42-.54-.42l-.54,.43Zm.91-.73l.14,.62-.13-.63h0Zm-32.97-119.65c-.25,0-.51,0-.76,0-20.79,.45-33.19,16.92-33.19,44.04,0,53.75,54.32,68.66,66.54,71.33,12.22-2.67,66.53-17.58,66.53-71.33,0-27.13-12.41-43.59-33.19-44.04-10.91-.24-19.33,4.6-24.98,14.37-4.5,7.78-5.69,16.05-5.88,17.63h-4.96c-.19-1.58-1.38-9.84-5.88-17.63-5.52-9.54-13.66-14.38-24.22-14.38Z" />
+          <path
+            d="M99.11,169.75l-.93-2.32c-.26-.65-6.31-16.13,.02-30.91l.98-2.3,4.6,1.97-.98,2.3c-5.53,12.9-.03,26.95,.02,27.09l.93,2.32-4.64,1.86Z" />
+        </g>
+      </svg>
+    </button>
+    <button class="navtabs" onclick="openPage(event, 'Write');" id="writeButton">
+      <svg id="write2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <text id="write2Text" class="write2Text" transform="translate(83.09 90.06) rotate(-28.92)">
+          <tspan x="0" y="0">W</tspan>
+        </text>
+        <text class="write2Text" transform="translate(120.56 69.92) rotate(-7.14)">
+          <tspan x="0" y="0">R</tspan>
+        </text>
+        <text class="write2Text" transform="translate(153.22 66.83) rotate(5.73)">
+          <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="write2Text" transform="translate(165.11 67.05) rotate(17.34)">
+          <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="write2Text" transform="translate(191.22 74.67) rotate(34.02)">
+          <tspan x="0" y="0">E</tspan>
+        </text>
+        <g id="write2Icon">
+          <path
+            d="M149.5,226.82l-.86-.31c-9.73-3.55-19.92-6.05-30.27-7.44-10.31-1.38-20.79-1.66-31.17-.83l-2.7,.22V112.89l1.81-.52c10.22-2.92,21.2-3.83,31.77-2.6,11.1,1.28,21.93,4.91,31.42,10.5,9.49-5.6,20.32-9.22,31.42-10.5l.29,2.48-.29-2.48c10.57-1.22,21.55-.32,31.77,2.6l1.81,.52v105.56l-2.7-.22c-10.37-.83-20.86-.56-31.17,.83-10.36,1.39-20.54,3.89-30.27,7.44l-.86,.31Zm-50.58-14.05c6.73,0,13.46,.45,20.12,1.34,10.41,1.4,20.65,3.88,30.46,7.39,9.81-3.51,20.05-6,30.46-7.39,9.77-1.31,19.69-1.66,29.54-1.05V116.68c-9.07-2.35-18.71-3.02-28.01-1.95-10.89,1.26-21.5,4.92-30.68,10.58l-1.31,.81-1.31-.81c-9.18-5.66-19.79-9.32-30.68-10.58-9.29-1.07-18.94-.4-28.01,1.95v96.37c3.13-.2,6.28-.29,9.42-.29Z" />
+          <rect x="99" y="128" width="5" height="24" />
+          <rect x="147" y="121" width="5" height="105" />
+        </g>
+      </svg>
+    </button>
+    <button class="navtabs" onclick="openPage(event, 'Home');" id="defaultOpen">
+      <svg id="home2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <text id="home2Text" class="home2Text" transform="translate(87.74 87.49) rotate(-28.92)">
+          <tspan x="0" y="0">H</tspan>
+        </text>
+        <text class="home2Text" transform="translate(115.69 71.31) rotate(-9.31)">
+          <tspan x="0" y="0">O</tspan>
+        </text>
+        <text class="home2Text" transform="translate(150 64.97) rotate(11.53)">
+          <tspan x="0" y="0">M</tspan>
+        </text>
+        <text class="home2Text" transform="translate(186.67 72.72) rotate(31.15)">
+          <tspan x="0" y="0">E</tspan>
+        </text>
+        <g id="home2Icon">
+          <path
+            d="M217.5,221.94h-50.55v-51.81h-34.04v51.81h-50.55v-85.96l67.57-49.79,67.57,49.79v85.96Zm-45.55-5h40.55v-78.43l-62.57-46.1-62.57,46.1v78.43h40.55v-51.81h44.04v51.81Z" />
+          <polygon points="103.2 156.87 98.2 156.87 98.2 143.74 111.77 133.69 114.75 137.7 103.2 146.26 103.2 156.87" />
+        </g>
+      </svg>
+    </button>
+    <button class="navtabs" onclick="openPage(event, 'Meditate');" id="meditateButton">
+      <svg id="meditate2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <text id="meditate2Text" class="meditate2Text" transform="translate(60.65 120.61) rotate(-52.21)">
+          <tspan x="0" y="0">M</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(83.81 91.15) rotate(-32.79)">
+          <tspan x="0" y="0">E</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(108.54 74.53) rotate(-14.63)">
+          <tspan x="0" y="0">D</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(140.5 67.23) rotate(-1.63)">
+          <tspan x="0" y="0">I</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(152.33 65.93) rotate(9.84)">
+          <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(176.03 69.15) rotate(24.62)">
+          <tspan x="0" y="0">A</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(200.39 79.74) rotate(39.32)">
+          <tspan x="0" y="0">T</tspan>
+        </text>
+        <text class="meditate2Text" transform="translate(221.76 96.59) rotate(55.85)">
+          <tspan x="0" y="0">E</tspan>
+        </text>
+        <g id="meditate2Icon">
+          <path
+            d="M164.87,217.07c-18.46,0-43.78-9.28-53.2-14.34-4.59-2.46-6.81-6.62-6.09-11.41,.73-4.87,4.51-9.48,8.44-10.26l2.45-.49,.98,4.9-2.45,.49c-1.46,.29-3.99,2.87-4.47,6.1-.4,2.69,.78,4.8,3.52,6.27,8.26,4.44,35.32,14.67,53.33,13.68l2.5-.14,.28,4.99-2.5,.14c-.9,.05-1.83,.07-2.77,.07Z" />
+          <path
+            d="M108,197h-2.5c-8,0-16-4.27-22.54-12.03-5.59-6.64-9.41-15.18-9.95-22.28-.62-8.02,2.29-11.06,4.86-13.74,2.01-2.1,3.75-3.92,4.14-8.66,.81-9.76,7.14-23.33,15.25-27.96,7.5-4.29,22.9-6.71,29.01-.6l1.77,1.77-3.54,3.54-1.77-1.77c-3.78-3.78-16.36-2.39-22.99,1.4-5.34,3.05-11.88,13.67-12.75,24.04-.54,6.51-3.3,9.39-5.51,11.7-2.28,2.38-3.93,4.11-3.49,9.9,.9,11.68,13.12,29.69,27.51,29.69h2.5v5Z" />
+          <path
+            d="M204.04,134.87l-.59-2.43c-1.34-5.51-12.13-13.9-22.33-15.47-7.18-1.1-11.21-3.31-15.1-5.43-3.39-1.85-6.58-3.6-11.96-4.58-5.75-1.05-20.23-1.87-30.5,12.96l-1.42,2.06-4.11-2.85,1.42-2.06c8.4-12.13,21.33-17.61,35.5-15.04,6.17,1.12,9.88,3.15,13.47,5.11,3.68,2.01,7.15,3.91,13.47,4.88,11.61,1.79,24.45,11.13,26.42,19.22l.59,2.43-4.86,1.19Z" />
+          <path
+            d="M206.66,195.39c-2.8,0-5.17-.96-6.51-1.88l-2.07-1.41,2.82-4.13,2.06,1.41c.43,.28,4.53,2.77,8.94-1.17,5.6-5,9.11-15.52,9.37-28.12,.16-7.53-6.6-16.51-13.35-21.48-4.2-3.09-8.28-4.52-10.64-3.73l-2.37,.79-1.58-4.74,2.37-.79c4.07-1.35,9.46,.23,15.19,4.45,7.55,5.56,15.59,15.95,15.38,25.61-.29,13.97-4.42,25.84-11.04,31.75-2.9,2.59-5.93,3.45-8.58,3.45Z" />
+          <path
+            d="M163.88,198.49l-3.11-3.92,1.96-1.55c3.74-2.97,7.9-3.02,16.87-3.02h.9c5.35,0,6.04-2.67,7.1-8.71,.84-4.79,1.88-10.75,7.68-13.97,6.95-3.86,1.97-15.71,1.92-15.83l-.98-2.3,4.6-1.97,.98,2.3c.07,.16,1.66,3.92,2.07,8.38,.59,6.46-1.54,11.23-6.15,13.79-3.71,2.06-4.43,6.14-5.19,10.47-1,5.72-2.25,12.85-12.03,12.85h-.57c-8.85,0-11.77,.09-14.08,1.93l-1.96,1.55Z" />
+          <path
+            d="M185.65,234.32l-1.12-1.29c-.13-.15-12.89-14.82-22.6-22.58l-1.95-1.56,3.12-3.9,1.95,1.56c8.45,6.76,18.73,18.1,22.12,21.92l10.5-3.73c-2.11-7.19-.21-11.74,1.79-16.53,1.63-3.91,3.32-7.96,3.17-14.35l-.06-2.5,5-.11,.06,2.5c.17,7.45-1.81,12.2-3.56,16.39-2.05,4.92-3.53,8.47-.91,15.23l.93,2.4-18.46,6.55Z" />
+          <path
+            d="M175,177h-5v-2.5c0-3.39-1.24-5.71-2.55-8.17-2.14-4.01-4.56-8.56-.82-16.86,1.94-4.31,1.52-8.56-1.18-11.66-3.11-3.58-8.39-4.83-13.79-3.26l-2.4,.7-1.4-4.8,2.4-.7c7.28-2.13,14.55-.3,18.96,4.78,3.97,4.57,4.7,10.92,1.96,16.99-2.73,6.06-1.3,8.74,.67,12.45,1.47,2.76,3.13,5.88,3.13,10.52v2.5Z" />
+          <path
+            d="M94.9,177.85l-1.11-2.24c-2.49-5.03-1-11.02,.31-16.3,.8-3.21,1.55-6.23,1.37-8.62l-.19-2.49,4.99-.39,.19,2.49c.25,3.19-.64,6.76-1.5,10.21-1.16,4.66-2.36,9.48-.68,12.87l1.11,2.24-4.48,2.22Z" />
+          <path
+            d="M133.75,187.07l-5-.13,.07-2.5c.04-1.35,.09-13.2-8.88-13.83-4.64-.33-7.95-2.94-10.87-5.24-3.34-2.63-6.22-4.9-10.93-4.43l-2.49,.25-.5-4.97,2.49-.25c6.71-.68,10.87,2.59,14.53,5.48,2.69,2.12,5.02,3.96,8.12,4.18,9.67,.68,13.76,10.01,13.52,18.95l-.07,2.5Z" />
+          <path
+            d="M150.18,167.17l-.17-2.49c0-.06-.53-6.67-4.27-10.4-1.85-1.84-3.73-2.34-6.34-3.04-2.03-.54-4.32-1.15-7.02-2.5-6.2-3.1-9.1-8.22-8.16-14.41,1.37-9.09,10.77-17.77,17.63-18.9l2.47-.41,.81,4.93-2.47,.41c-5.1,.84-12.48,7.94-13.51,14.72-.6,3.99,1.23,7.08,5.45,9.19,2.24,1.12,4.18,1.64,6.07,2.14,2.98,.79,5.79,1.54,8.58,4.33,5.09,5.08,5.7,13.25,5.73,13.6l.17,2.49-4.99,.34Z" />
+          <path
+            d="M148.32,199.53l-4.85-1.21,.61-2.43c1.17-4.68-.8-11.42-2.71-17.93-2.69-9.17-5.47-18.66-.96-25.62l1.36-2.1,4.2,2.72-1.36,2.1c-3.26,5.03-.81,13.4,1.56,21.49,2.1,7.16,4.27,14.56,2.77,20.55l-.61,2.42Z" />
+          <path
+            d="M188.79,153.17l-4.52-2.14,1.07-2.26c1.8-3.8,.64-5.24-1.45-7.85-2.2-2.74-5.21-6.5-2.74-13.28l.85-2.35,4.7,1.71-.85,2.35c-1.51,4.14-.06,5.94,1.94,8.44,2.2,2.74,5.21,6.49,2.07,13.12l-1.07,2.26Z" />
+          <path
+            d="M126.5,144.04l-1.77-1.77c-3.59-3.59-6.96-3.28-10.86-2.93-4.23,.39-9.5,.87-13.1-5.67l-1.21-2.19,4.38-2.42,1.21,2.19c1.95,3.53,3.95,3.51,8.27,3.11,4.28-.39,9.6-.88,14.85,4.37l1.77,1.77-3.54,3.54Z" />
+        </g>
+      </svg>
+    </button>
+    <button class="navtabs" onclick="openPage(event, 'Focus');" id="focusButton">
+      <svg id="focus2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+        <text id="focus2Text" class="focus2Text" transform="translate(79.82 95.25) rotate(-36.88)">
+          <tspan x="0" y="0">F</tspan>
+        </text>
+        <text class="focus2Text" transform="translate(100.95 78.16) rotate(-18.76)">
+          <tspan x="0" y="0">O</tspan>
+        </text>
+        <text class="focus2Text" transform="translate(133.89 66.73) rotate(.93)">
+          <tspan x="0" y="0">C</tspan>
+        </text>
+        <text class="focus2Text" transform="translate(166.28 66.79) rotate(19.54)">
+          <tspan x="0" y="0">U</tspan>
+        </text>
+        <text class="focus2Text" transform="translate(196.81 77.47) rotate(37.64)">
+          <tspan x="0" y="0">S</tspan>
+        </text>
+        <g id="focus2Icon">
+          <path
+            d="M152.5,163.46h-5v-21.73c-16.19-1.7-26.93-7.06-31.93-15.94-6.95-12.34,0-26.56,.31-27.16l.5-1.01,1.09-.29c8.52-2.27,18.4-.37,25.17,4.83,4.5,3.46,9.86,10.06,9.86,21.89v13.09l.19,.02-.19,2.39v23.91Zm-32.6-61.56c-1.3,3.18-4.66,13.14,.04,21.47,4.12,7.29,13.39,11.77,27.56,13.33v-12.64c0-7.75-2.73-13.94-7.91-17.92-5.94-4.57-13.94-5.41-19.69-4.23Z" />
+          <path
+            d="M158.74,154.77c-1.97,0-4.06-.12-6.25-.36v.18h-5v-2.5c0-.82,.13-20.23,11.52-27.19,6.08-3.72,13.98-3.14,23.47,1.73l1.09,.56,.23,1.21c.09,.47,2.07,11.66-5.32,19.43-4.39,4.62-11.01,6.94-19.75,6.94Zm-6.1-5.37c10.42,1.2,17.88-.48,22.19-4.98,4.42-4.63,4.41-11.24,4.19-13.91-7.28-3.49-13.12-3.93-17.39-1.33-6.83,4.17-8.55,15.12-8.99,20.23Z" />
+          <path d="M191.52,231H108.02l-6.58-57h95.56l-5.48,57Zm-79.04-5h74.5l4.52-47H107.05l5.42,47Z" />
+          <path d="M204.25,179H94.25v-19h110v19Zm-105-5h100v-9H99.25v9Z" />
+          <rect x="120.84" y="189.46" width="5" height="25.61" transform="translate(-21.93 15.13) rotate(-6.45)" />
+        </g>
+      </svg>
+    </button>
+  </nav>
+
+  <!-- ________________________HOME________________________ -->
+  <div class="grid tabcontent" id="Home">
+
+    <!-- ________WELCOME MESSAGE________ -->
+    <div class="cell col1 md1 pageTitleTop fadeIn">
+      <small>HOME</small>
+    </div>
+    <div class="cell col1 md1 fadeInLeft">
+      <h1>Good <span id="currentGreeting">[morning/afternoon/evening]</span>! Today is <span
+          id="currentDate">[date]</span>. It is <span id="currentTime">[time]</span>.</h1>
+    </div>
+
+    <!-- ________LINK TO AFFIRMATIONS________ -->
+    <div class="cell col1 md1 fadeInLeft" id="homeAffirmationsSection">
+      <h2><span id="homeAffirmationTitle"></span> affirmation</h2>
+      <span class="openButtons label"><span class="labelText" onclick="openAffirmationsPage();">Show all</span>
+        &gt;</span>
+      <img src="" class="affirmationImages fadeIn" id="homeAffirmationImage">
+    </div>
+
+    <div class="cell col1 md1 fadeInLeft bottomDiv" id="homeMeditateSection">
+      <h2><span id="homeMeditationTitle">[title]</span> meditation</h2>
+      <span class="openButtons label"><span class="labelText" onclick="openMeditatePage();">Show all</span> &gt;</span>
+      <p>Here is a meditation to help you <span id="meditationHelpYou">[relax]</span>.</p>
+      <div class="meditationAudios">
+        <audio class="meditationAudiosAll" id="homeMeditationAudio">
+          <source src="audio/middayReset10Default.mp3" type="audio/mpeg">
+        </audio>
+        <button onclick="homeMeditationPlay();" class="meditationAudiosButtons" id="homeMeditationPlayButton">
+          <img src="img/meditate/meditationPlay1.svg" class="meditateIcon" id="homeMeditationPlayImage1">
+          <img src="img/meditate/meditationPlay2.svg" class="meditateIcon" id="homeMeditationPlayImage2">
+        </button>
+        <button onclick="homeMeditationPause();" class="meditationAudiosButtons" id="homeMeditationPauseButton">
+          <img src="img/meditate/meditationPause1.svg" class="meditateIcon" id="homeMeditationPauseImage1">
+          <img src="img/meditate/meditationPause2.svg" class="meditateIcon" id="homeMeditationPauseImage2">
+        </button>
+        <button onclick="homeMeditationStop();" class="meditationAudiosButtons" id="homeMeditationStopButton">
+          <img src="img/meditate/meditationStop1.svg" class="meditateIcon" id="homeMeditationStopImage1">
+          <img src="img/meditate/meditationStop2.svg" class="meditateIcon" id="homeMeditationStopImage2">
+        </button>
+        <p id="homeMeditationAudiosText"><span id="homeMeditationAudiosTitle">Start your day</span> - 10 mins</p>
+      </div>
+    </div>
+
+  </div>
+
+  <!--   ________________________AFFIRMATIONS________________________ -->
+  <div class="grid tabcontent" id="Affirmations">
+    <div class="cell col1 md1 pageTitleTop fadeIn">
+      <small>AFFIRMATIONS</small>
+    </div>
+
+    <!-- ________REFRESH BUTTON________ -->
+    <div class="cell col1 md1 fadeInLeft" id="refreshButtonContainer">
+      <button class="appButtons" id="affirmationsRefreshButton" onclick="changeAffirmations();">
+        <img src="img/write/generate1.svg" class="icon" id="refreshImage1">
+        <img src="img/write/generate2.svg" class="icon" id="refreshImage2">
+        refresh
+      </button>
+    </div>
+
+    <!-- ________AFFIRMATION IMAGES________ -->
+    <div class="cell col4 md3">
+      <div class="affirmationSlots fadeInLeft" id="affirmationSlot1"></div>
+      <!-- <div class="affirmationSlots" id="affirmationSlot2"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot3"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot4"></div> -->
+    </div>
+    <div class="cell col4 md3">
+      <div class="affirmationSlots fadeInLeft" id="affirmationSlot5"></div>
+      <!-- <div class="affirmationSlots" id="affirmationSlot6"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot7"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot8"></div> -->
+    </div>
+    <div class="cell col4 md3">
+      <div class="affirmationSlots fadeInLeft" id="affirmationSlot9"></div>
+      <!-- <div class="affirmationSlots" id="affirmationSlot10"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot11"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot12"></div> -->
+    </div>
+    <div class="cell col4 md3">
+      <div class="affirmationSlots fadeInLeft" id="affirmationSlot13"></div>
+      <!-- <div class="affirmationSlots" id="affirmationSlot14"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot15"></div> -->
+      <!-- <div class="affirmationSlots" id="affirmationSlot16"></div> -->
+    </div>
+
+    <div class="cell col1 md1 fadeIn bottomDiv" id="affirmationsBackToTopContainer">
+      <a id="backToTopButton" href="#"><span id="backToTopButtonText">Back to top</span> ^</a>
+    </div>
+
+  </div>
+
+  <!--   ________________________WRITE________________________ -->
+  <div class="grid tabcontent" id="Write">
+    <div class="cell col1 md1 pageTitleTop fadeIn">
+      <small>WRITE</small>
+    </div>
+
+    <!-- ________COPY GENERATE AND FILTER BUTTONS________ -->
+    <div class="cell col1 md1 fadeInLeft" id="copyAndGenerate">
+      <button class="appButtons" id="copyButton" onclick="copyQuestion();">
+        <img src="img/write/clipboard1.svg" class="icon" id="copyImage1">
+        <img src="img/write/clipboard2.svg" class="icon" id="copyImage2">
+        <span id="copyOrCopied">copy</span>
+      </button>
+      <button class="appButtons" id="generateButton" onclick="changeQuestion();">
+        <img src="img/write/generate1.svg" class="icon" id="generateImage1">
+        <img src="img/write/generate2.svg" class="icon" id="generateImage2">
+        generate
+      </button>
+      <button class="appButtons" id="typeButton" onclick="changeQuestionType();">
+        <img src="img/write/type1.svg" class="icon" id="typeImage1">
+        <img src="img/write/type2.svg" class="icon" id="typeImage2">
+        <span id="questionType">all</span>
+      </button>
+    </div>
+
+    <!-- ________PROMPT GENERATOR________ -->
+    <div class="cell col1 md1 fadeInLeft bottomDiv" id="contentContainer">
+      <div id="questionContainer">
+        <h3 class="fadeIn" id="contentTextQuestion">Click the generate button to generate a writing prompt...</h3>
+      </div>
+    </div>
+
+  </div>
+
+  <!--   ________________________MEDITATE________________________ -->
+  <div class="grid tabcontent" id="Meditate">
+    <div class="cell col1 md1 pageTitleTop fadeIn">
+      <small>MEDITATE</small>
+    </div>
+
+    <!-- ________TIME OF DAY________ -->
+    <div class="cell col1 md1">
+      <h2 class="fadeInLeft">Time of day</h2>
+      <label for="meditationTimeCheckbox" class="openButtons fadeInLeft">
+        <span class="labelText">Show all</span> &gt;
+      </label>
+      <p class="fadeInLeft">Here are different meditations you can do throughout the day.</p>
+      <div>
+        <input type="checkbox" id="meditationTimeCheckbox" class="slideinCheckboxes" />
+
+        <div class="slideinContent" id="meditationTime">
+          <label for="meditationTimeCheckbox" id="meditationTimeClose" class="closeButtons">
+            &lt; <span class="labelText">Back</span>
+          </label>
+          <h1>Time of day</h1>
+
+          <!-- __MORNING__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="startDay10">
+              <source src="audio/startDay10.mp3" type="audio/mpeg">
+            </audio>
+            <button
+              onclick="meditationPlay('startDay10', 'meditationMorningPlayButton', 'meditationMorningPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationMorningPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button
+              onclick="meditationPause('startDay10', 'meditationMorningPlayButton', 'meditationMorningPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationMorningPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button
+              onclick="meditationStop('startDay10', 'meditationMorningPlayButton', 'meditationMorningPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationMorningStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Morning</span> - 10 mins</p>
+          </div>
+
+          <!-- __AFTERNOON__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="middayReset10">
+              <source src="audio/middayReset10.mp3" type="audio/mpeg">
+            </audio>
+            <button
+              onclick="meditationPlay('middayReset10', 'meditationAfternoonPlayButton', 'meditationAfternoonPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationAfternoonPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button
+              onclick="meditationPause('middayReset10', 'meditationAfternoonPlayButton', 'meditationAfternoonPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationAfternoonPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button
+              onclick="meditationStop('middayReset10', 'meditationAfternoonPlayButton', 'meditationAfternoonPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationAfternoonStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Afternoon</span> - 10 mins</p>
+          </div>
+
+          <!-- __EVENING__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="evening10">
+              <source src="audio/evening10.mp3" type="audio/mpeg">
+            </audio>
+            <button
+              onclick="meditationPlay('evening10', 'meditationEveningPlayButton', 'meditationEveningPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationEveningPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button
+              onclick="meditationPause('evening10', 'meditationEveningPlayButton', 'meditationEveningPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationEveningPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button
+              onclick="meditationStop('evening10', 'meditationEveningPlayButton', 'meditationEveningPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationEveningStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Evening</span> - 10 mins</p>
+          </div>
+
+          <!-- __NIGHT__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="sleep10">
+              <source src="audio/sleep10.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="meditationPlay('sleep10', 'meditationNightPlayButton', 'meditationNightPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationNightPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button onclick="meditationPause('sleep10', 'meditationNightPlayButton', 'meditationNightPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationNightPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button onclick="meditationStop('sleep10', 'meditationNightPlayButton', 'meditationNightPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationNightStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Night</span> - 10 mins</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- __TIME OF DAY CARDS: MORNING__ -->
+    <div class="cell col2 md2 sm2 meditationCards fadeInLeft" id="meditationMorningCard">
+      <div class="meditationCardsText">
+        <audio class="meditationAudiosAll" id="meditateMorningAudio">
+          <source src="audio/startDay10Card.mp3" type="audio/mpeg">
+        </audio>
+        <h5>Morning</h5>
+        <p class="meditationCardsTimes">10 mins</p>
+      </div>
+      <div class="meditationCardsButtons">
+        <button onclick="meditateMorningPlay();" class="meditationAudiosButtons meditationPlayButtons"
+          id="meditateMorningPlayButton">
+          <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+          <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+        </button>
+        <button onclick="meditateMorningPause();" class="meditationAudiosButtons meditationPauseButtons"
+          id="meditateMorningPauseButton">
+          <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+          <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+        </button>
+        <button onclick="meditateMorningStop();" class="meditationAudiosButtons meditationStopButtons"
+          id="meditateMorningStopButton">
+          <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+          <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+        </button>
+      </div>
+      <img src="img/meditate/time/morningImage.svg" class="meditationCardsIcons">
+    </div>
+
+    <!-- __TIME OF DAY CARDS: SLEEP__ -->
+    <div class="cell col2 md2 sm2 meditationCards fadeInLeft" id="meditationNightCard">
+      <div class="meditationCardsText">
+        <audio class="meditationAudiosAll" id="meditateNightAudio">
+          <source src="audio/sleep10Card.mp3" type="audio/mpeg">
+        </audio>
+        <h5>Night</h5>
+        <p class="meditationCardsTimes">10 mins</p>
+      </div>
+      <div class="meditationCardsButtons">
+        <button onclick="meditateNightPlay();" class="meditationAudiosButtons meditationPlayButtons"
+          id="meditateNightPlayButton">
+          <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+          <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+        </button>
+        <button onclick="meditateNightPause();" class="meditationAudiosButtons meditationPauseButtons"
+          id="meditateNightPauseButton">
+          <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+          <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+        </button>
+        <button onclick="meditateNightStop();" class="meditationAudiosButtons meditationStopButtons"
+          id="meditateNightStopButton">
+          <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+          <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+        </button>
+      </div>
+      <img src="img/meditate/time/eveningImage.svg" class="meditationCardsIcons">
+    </div>
+
+    <!-- ________MOOD________ -->
+    <div class="cell col1 md1">
+      <h2 class="fadeInLeft meditateMoodSection">Mood</h2>
+      <label for="meditationMoodCheckbox" class="openButtons fadeInLeft meditateMoodSection">
+        <span class="labelText">Show all</span> &gt;
+      </label>
+      <p class="fadeInLeft meditateMoodSection">Here are different meditations you can do throughout the day.</p>
+      <div>
+        <input type="checkbox" id="meditationMoodCheckbox" class="slideinCheckboxes" />
+
+        <div class="slideinContent" id="meditationMood">
+          <label for="meditationMoodCheckbox" id="meditationMoodClose" class="closeButtons">
+            &lt; <span class="labelText">back</span>
+          </label>
+          <h1>Mood</h1>
+
+          <!-- __HAPPY__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="happy5">
+              <source src="audio/happy5.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="meditationPlay('happy5', 'meditationHappyPlayButton', 'meditationHappyPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationHappyPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button onclick="meditationPause('happy5', 'meditationHappyPlayButton', 'meditationHappyPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationHappyPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button onclick="meditationStop('happy5', 'meditationHappyPlayButton', 'meditationHappyPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationHappyStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Happy</span> - 5 mins</p>
+          </div>
+
+          <!-- __FRUSTRATION__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="frustration10">
+              <source src="audio/frustration10.mp3" type="audio/mpeg">
+            </audio>
+            <button
+              onclick="meditationPlay('frustration10', 'meditationFrustrationPlayButton', 'meditationFrustrationPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationFrustrationPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button
+              onclick="meditationPause('frustration10', 'meditationFrustrationPlayButton', 'meditationFrustrationPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationFrustrationPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button
+              onclick="meditationStop('frustration10', 'meditationFrustrationPlayButton', 'meditationFrustrationPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationFrustrationStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Frustration</span> - 10 mins</p>
+          </div>
+
+          <!-- __ANGER__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="anger10">
+              <source src="audio/anger10.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="meditationPlay('anger10', 'meditationAngerPlayButton', 'meditationAngerPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationAngerPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button onclick="meditationPause('anger10', 'meditationAngerPlayButton', 'meditationAngerPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationAngerPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button onclick="meditationStop('anger10', 'meditationAngerPlayButton', 'meditationAngerPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationAngerStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Anger</span> - 10 mins</p>
+          </div>
+
+          <!-- __SADNESS__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="depression10">
+              <source src="audio/depression10.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="meditationPlay('depression10', 'meditationSadPlayButton', 'meditationSadPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationSadPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button onclick="meditationPause('depression10', 'meditationSadPlayButton', 'meditationSadPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationSadPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button onclick="meditationStop('depression10', 'meditationSadPlayButton', 'meditationSadPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationSadStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Sadness</span> - 10 mins</p>
+          </div>
+
+          <!-- __ANXIETY__ -->
+          <div class="meditationAudios">
+            <audio class="meditationAudiosAll" id="anxiety10">
+              <source src="audio/anxiety10.mp3" type="audio/mpeg">
+            </audio>
+            <button
+              onclick="meditationPlay('anxiety10', 'meditationAnxietyPlayButton', 'meditationAnxietyPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationAnxietyPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button
+              onclick="meditationPause('anxiety10', 'meditationAnxietyPlayButton', 'meditationAnxietyPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationAnxietyPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button
+              onclick="meditationStop('anxiety10', 'meditationAnxietyPlayButton', 'meditationAnxietyPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationAnxietyStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Anxiety</span> - 10 mins</p>
+          </div>
+
+          <!-- __STRESS__ -->
+          <div class="meditationAudios bottomDiv">
+            <audio class="meditationAudiosAll" id="stress10">
+              <source src="audio/stress10.mp3" type="audio/mpeg">
+            </audio>
+            <button onclick="meditationPlay('stress10', 'meditationStressPlayButton', 'meditationStressPauseButton');"
+              class="meditationAudiosButtons meditationPlayButtons" id="meditationStressPlayButton">
+              <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+              <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+            </button>
+            <button onclick="meditationPause('stress10', 'meditationStressPlayButton', 'meditationStressPauseButton');"
+              class="meditationAudiosButtons meditationPauseButtons" id="meditationStressPauseButton">
+              <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+              <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+            </button>
+            <button onclick="meditationStop('stress10', 'meditationStressPlayButton', 'meditationStressPauseButton');"
+              class="meditationAudiosButtons meditationStopButtons" id="meditationStressStopButton">
+              <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+              <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+            </button>
+            <p class="meditationAudiosText"><span class="meditationAudiosTitles">Stress</span> - 10 mins</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- __MOOD CARDS: HAPPINESS__ -->
+    <div class="cell col2 md2 sm2 meditationCards fadeInLeft bottomDiv" id="meditationHappinessCard">
+      <div class="meditationCardsText">
+        <audio class="meditationAudiosAll" id="meditateHappinessAudio">
+          <source src="audio/happy5Card.mp3" type="audio/mpeg">
+        </audio>
+        <h5>Happiness</h5>
+        <p class="meditationCardsTimes">5 mins</p>
+      </div>
+      <div class="meditationCardsButtons">
+        <button onclick="meditateHappinessPlay();" class="meditationAudiosButtons meditationPlayButtons"
+          id="meditateHappinessPlayButton">
+          <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+          <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+        </button>
+        <button onclick="meditateHappinessPause();" class="meditationAudiosButtons meditationPauseButtons"
+          id="meditateHappinessPauseButton">
+          <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+          <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+        </button>
+        <button onclick="meditateHappinessStop();" class="meditationAudiosButtons meditationStopButtons"
+          id="meditateHappinessStopButton">
+          <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+          <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+        </button>
+      </div>
+      <img src="img/meditate/mood/happinessImage.svg" class="meditationCardsIcons">
+    </div>
+
+    <!-- __MOOD CARDS: STRESS__ -->
+    <div class="cell col2 md2 sm2 meditationCards fadeInLeft bottomDiv" id="meditationStressCard">
+      <div class="meditationCardsText">
+        <audio class="meditationAudiosAll" id="meditateStressAudio">
+          <source src="audio/stress10Card.mp3" type="audio/mpeg">
+        </audio>
+        <h5>Stress</h5>
+        <p class="meditationCardsTimes">10 mins</p>
+      </div>
+      <div class="meditationCardsButtons">
+        <button onclick="meditateStressPlay();" class="meditationAudiosButtons meditationPlayButtons"
+          id="meditateStressPlayButton">
+          <img src="img/meditate/meditationPlay1.svg" class="meditateIcon meditationPlayImages1">
+          <img src="img/meditate/meditationPlay2.svg" class="meditateIcon meditationPlayImages2">
+        </button>
+        <button onclick="meditateStressPause();" class="meditationAudiosButtons meditationPauseButtons"
+          id="meditateStressPauseButton">
+          <img src="img/meditate/meditationPause1.svg" class="meditateIcon meditationPauseImages1">
+          <img src="img/meditate/meditationPause2.svg" class="meditateIcon meditationPauseImages2">
+        </button>
+        <button onclick="meditateStressStop();" class="meditationAudiosButtons meditationStopButtons"
+          id="meditateStressStopButton">
+          <img src="img/meditate/meditationStop1.svg" class="meditateIcon meditationStopImages1">
+          <img src="img/meditate/meditationStop2.svg" class="meditateIcon meditationStopImages2">
+        </button>
+      </div>
+      <img src="img/meditate/mood/stressImage.svg" class="meditationCardsIcons">
+    </div>
+
+  </div>
+
+  <!--   ________________________FOCUS________________________ -->
+  <div class="grid tabcontent lightBlueBackground" id="Focus">
+    <div class="cell col1 md1 pageTitleTop fadeIn">
+      <small>FOCUS</small>
+    </div>
+
+    <!-- ________TODO LIST________ -->
+    <div class="cell span9 mdspan9 sm1 fadeInLeft" id="focusTaskSection">
+      <div>
+        <button id="addButton" onclick="addToList();">
+          <img src="img/focus/add1.svg" class="icon" id="addImage1">
+          <img src="img/focus/add2.svg" class="icon" id="addImage2">
+        </button>
+        <input id="focusToDoTextbox" type="text" placeholder="Add a task..." minlength="1" maxlength="50">
+      </div>
+      <span class="errorMessages fadeInOut" id="focusTaskError">Please enter a task...</span>
+      <br>
+      <br>
+      <div id="toDoList">
+        <div class="toDoTaskEntire" id="testTask">
+          <button class="removeButtons inline" onclick="removeFromList('testTask');">
+            <img src="img/focus/remove1.svg" class="icon removeImage1">
+            <img src="img/focus/remove2.svg" class="icon removeImage2">
+          </button>&nbsp;&nbsp;&nbsp;
+          <p class="toDoTasks inline">Click the + sign to add a task...</p>
+        </div>
+        <div class="toDoTaskEntire" id="testTask2">
+          <button class="removeButtons inline" onclick="removeFromList('testTask2');">
+            <img src="img/focus/remove1.svg" class="icon removeImage1">
+            <img src="img/focus/remove2.svg" class="icon removeImage2">
+          </button>&nbsp;&nbsp;&nbsp;
+          <p class="toDoTasks inline">Click the - sign to remove a task...</p>
+        </div>
+        <div class="toDoTaskEntire" id="testTask3">
+          <button class="removeButtons inline" onclick="removeFromList('testTask3');">
+            <img src="img/focus/remove1.svg" class="icon removeImage1">
+            <img src="img/focus/remove2.svg" class="icon removeImage2">
+          </button>&nbsp;&nbsp;&nbsp;
+          <p class="toDoTasks inline">1:00 = 1 hour, 0:10 = 10 minutes, 0:01 = 1 minute</p>
+        </div>
+      </div>
+    </div>
+    <div class="cell col4 md4 sm1 fadeInLeft" id="focusSunContainer">
+      <img src="img/focus/sunbreathe.gif" id="focusSun">
+    </div>
+
+    <!-- ________TIMER________ -->
+    <!-- __INPUT__ -->
+    <div class="cell span10 mdspan10 smspan8 fadeInLeft" id="focusTimerSection">
+      <form class="fadeIn" id="timerInput">
+        <input id="focusHourTextbox" type="number" name="hour" placeholder="H" value="" maxlength="1" min="0" max="9">
+        :
+        <input id="focusMinuteTensTextbox" type="number" name="minuteTens" placeholder="M" value="" maxlength="1"
+          min="0" max="5">
+        <input id="focusMinuteOnesTextbox" type="number" name="minuteOnes" placeholder="M" value="" maxlength="1"
+          min="0" max="9">
+      </form>
+      <h4 class="fadeIn" id="focusCountdown">[timer]</h4>
+      <div class="errorMessages fadeInOut" id="focusError"></div>
+      <div id="dateLoadedMilliseconds"></div>
+    </div>
+    <!-- __START AND STOP BUTTONS__ -->
+    <div class="cell col6 md6 sm3 fadeInLeft" id="focusStartStopSection">
+      <button class="focusTimerButtons" id="startButton" onclick="startTimer();">
+        <img src="img/focus/play1.svg" id="playImage1">
+        <img src="img/focus/play2.svg" id="playImage2">
+      </button>
+      <button class="focusTimerButtons" id="stopButton" onclick="stopTimer();">
+        <img src="img/focus/stop1.svg" id="stopImage1">
+        <img src="img/focus/stop2.svg" id="stopImage2">
+      </button>
+    </div>
+
+    <!-- __PLANT__ -->
+    <div class="fadeInLeft" id="plant">
+      <img src="img/focus/flower1.svg" id="plantImage">
+    </div>
+    <div class="fadeIn" id="focusBackground">
+      <!--       <img src="img/focus/focusBackground.svg" id="focusBackgroundImage"> -->
+    </div>
+
+
+
+  </div>
+
+  <!--     <div class="cell col1 md1">1 column</div>
+    <div class="cell col2 md2">2 column</div>
+    <div class="cell col2 md2">2 column</div>
+    <div class="cell col3">3 column</div>
+    <div class="cell col3">3 column</div>
+    <div class="cell col3">3 column</div>
+    <div class="cell col4 md2">4 column</div>
+    <div class="cell col4 md2">4 column</div>
+    <div class="cell col4 md2">4 column</div>
+    <div class="cell col4 md2">4 column</div>
+    <div class="cell col6 md2">6 column</div>
+    <div class="cell col6 md2">6 column</div>
+    <div class="cell col6 md2">6 column</div>
+    <div class="cell col6 md2">6 column</div>
+    <div class="cell col6 md2">6 column</div>
+    <div class="cell col6 md2">6 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>
+    <div class="cell col12 md3 sm2">12 column</div>     -->
+  <script src="script.js"></script>
+</body>
+
+</html>
