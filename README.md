@@ -1,3 +1,6 @@
+<img src="img/logo.svg">
+<br>
+
 # Vitamin ME
 A multi-purpose mental health app that encourages habit building and engaging in positive self-care practices.
 <br><br>
