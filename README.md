@@ -1,10 +1,10 @@
 # Vitamin ME
 A multi-purpose mental health app that encourages habit building and engaging in positive self-care practices.
-
----
+<br><br>
 
 ## References
 This project was created using the following list of external sources, cited in MLA format.
+<br><br>
 
 ### Audio
 
@@ -27,6 +27,7 @@ Headspace. “Frustrated? Cool Down and Get Peace of Mind With This Quick Medita
 ---. “Reset: Decompress Your Body and Mind.” YouTube, 1 Apr. 2020, [https://www.youtube.com/watch?v=QHkXvPq2pQE](https://www.youtube.com/watch?v=QHkXvPq2pQE).
 
 Positive Suggestion. “Evening Guided Meditation.” YouTube, 19 Jan. 2021, [https://www.youtube.com/watch?v=YlQLs17NfJE](https://www.youtube.com/watch?v=YlQLs17NfJE).
+<br><br>
 
 ### Images
 
