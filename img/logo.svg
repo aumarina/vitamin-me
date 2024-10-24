@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-logo_create_outline">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="logo_create_outline" data-name="logo create outline" clip-path="url(#clip-logo_create_outline)">
+    <rect width="100" height="100" fill="#fff0d7"/>
+    <g id="Group_107" data-name="Group 107" transform="matrix(0.966, 0.259, -0.259, 0.966, 14.808, -11.479)">
+      <path id="Subtraction_3" data-name="Subtraction 3" d="M-3462.5,40H-3481V7h18.5a16.392,16.392,0,0,1,11.667,4.833A16.392,16.392,0,0,1-3446,23.5a16.392,16.392,0,0,1-4.833,11.667A16.392,16.392,0,0,1-3462.5,40Z" transform="translate(3532 27)" fill="#fff"/>
+      <path id="Subtraction_3_-_Outline" data-name="Subtraction 3 - Outline" d="M-3462.5,41.5h-20V5.5h20a17.881,17.881,0,0,1,12.728,5.272A17.882,17.882,0,0,1-3444.5,23.5a17.882,17.882,0,0,1-5.272,12.728A17.882,17.882,0,0,1-3462.5,41.5Zm-17-3h17a14.9,14.9,0,0,0,10.606-4.393A14.9,14.9,0,0,0-3447.5,23.5a14.9,14.9,0,0,0-4.393-10.606A14.9,14.9,0,0,0-3462.5,8.5h-17Z" transform="translate(3532 27)"/>
+      <path id="Subtraction_4" data-name="Subtraction 4" d="M-3462.5,40H-3481V7h18.5a16.392,16.392,0,0,1,11.667,4.833A16.392,16.392,0,0,1-3446,23.5a16.392,16.392,0,0,1-4.833,11.667A16.392,16.392,0,0,1-3462.5,40Z" transform="translate(-3430 74) rotate(180)" fill="#fed18c"/>
+      <path id="Subtraction_4_-_Outline" data-name="Subtraction 4 - Outline" d="M-3462.5,41.5h-20V5.5h20a17.881,17.881,0,0,1,12.728,5.272A17.882,17.882,0,0,1-3444.5,23.5a17.882,17.882,0,0,1-5.272,12.728A17.882,17.882,0,0,1-3462.5,41.5Zm-17-3h17a14.9,14.9,0,0,0,10.606-4.393A14.9,14.9,0,0,0-3447.5,23.5a14.9,14.9,0,0,0-4.393-10.606A14.9,14.9,0,0,0-3462.5,8.5h-17Z" transform="translate(-3430 74) rotate(180)"/>
+      <path id="Path_123" data-name="Path 123" d="M2,0V-16.92H13.078v1.994H4.411v5.332h8.122v2.011H4.411v5.572h8.667V0Z" transform="translate(59 59)"/>
+      <path id="Path_122" data-name="Path 122" d="M-8.343,0V-16.92h2.185L.37-2.2H-.353L6.182-16.92H8.343V0H6.076V-13.531h.781L.773,0H-.783L-6.874-13.537h.8V0Z" transform="translate(34 59)"/>
+    </g>
+  </g>
+</svg>

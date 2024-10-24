@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <clipPath id="clip-eveningImage">
+      <rect width="300" height="300"/>
+    </clipPath>
+  </defs>
+  <g id="eveningImage" clip-path="url(#clip-eveningImage)">
+    <path id="Subtraction_5" data-name="Subtraction 5" d="M150,0a151.1,151.1,0,0,0-30.23,3.047,149.173,149.173,0,0,0-53.636,22.57,150.44,150.44,0,0,0-54.346,66,149.25,149.25,0,0,0-8.74,28.157,151.035,151.035,0,0,0,4.92,78.595,150.286,150.286,0,0,0,98.458,95.208A150.118,150.118,0,0,1,293.572,106.426,149.849,149.849,0,0,0,150,0Z" transform="translate(300 300) rotate(180)" fill="#455e80"/>
+    <path id="Path_117" data-name="Path 117" d="M7316.243,1096.693l-4.367-9c21.447-10.412,32.724-22.091,44.689-46.285l8.964,4.433C7352.593,1072,7339.7,1085.307,7316.243,1096.693Z" transform="translate(-7109.107 -846)" fill="#313a57"/>
+  </g>
+</svg>

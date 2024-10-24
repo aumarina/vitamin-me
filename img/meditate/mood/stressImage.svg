@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <clipPath id="clip-stressImage">
+      <rect width="300" height="300"/>
+    </clipPath>
+  </defs>
+  <g id="stressImage" clip-path="url(#clip-stressImage)">
+    <circle id="Ellipse_45" data-name="Ellipse 45" cx="150" cy="150" r="150" fill="#fe8cc1"/>
+    <path id="Path_117" data-name="Path 117" d="M7358.864,1096.693c-23.453-11.385-36.35-24.691-49.286-50.847l8.964-4.433c11.965,24.193,23.242,35.873,44.689,46.285Z" transform="translate(-7266 -846)" fill="#e038c0"/>
+    <g id="Group_173" data-name="Group 173">
+      <path id="Line_29" data-name="Line 29" d="M0,17.251a7.5,7.5,0,0,1-7.5-7.5V0A7.5,7.5,0,0,1,0-7.5,7.5,7.5,0,0,1,7.5,0V9.751A7.5,7.5,0,0,1,0,17.251Z" transform="translate(94.5 109.749)"/>
+      <path id="Line_30" data-name="Line 30" d="M0,17.251a7.5,7.5,0,0,1-7.5-7.5V0A7.5,7.5,0,0,1,0-7.5,7.5,7.5,0,0,1,7.5,0V9.751A7.5,7.5,0,0,1,0,17.251Z" transform="translate(205.5 109.749)"/>
+    </g>
+    <path id="Path_120" data-name="Path 120" d="M9065.059,1058.87a26.83,26.83,0,0,1-19.793-8.988,12.108,12.108,0,0,0-8.641-4.263,14.678,14.678,0,0,0-10.3,4.52,7.5,7.5,0,1,1-10.451-10.759c6-5.829,13.5-8.938,21.113-8.756a26.911,26.911,0,0,1,19.236,9.013c7.944,8.492,17.142,1.728,19.771-.548a7.5,7.5,0,0,1,9.816,11.342C9079.3,1056.06,9072.054,1058.869,9065.059,1058.87Z" transform="translate(-8900.999 -877.846)" fill="#101010"/>
+  </g>
+</svg>

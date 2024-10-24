@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-type2">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="type2" clip-path="url(#clip-type2)">
+    <g id="Polygon_7" data-name="Polygon 7">
+      <path d="M 92.24919128417969 33.5 L 7.75081205368042 33.5 L 50 3.080584526062012 L 92.24919128417969 33.5 Z" stroke="none"/>
+      <path d="M 50 6.161172866821289 L 15.50162506103516 31 L 84.49837493896484 31 L 50 6.161172866821289 M 50 0 L 100 36 L 0 36 L 50 0 Z" stroke="none" fill="#000"/>
+    </g>
+    <g id="Polygon_8" data-name="Polygon 8" transform="translate(100 100) rotate(180)">
+      <path d="M 92.24919128417969 33.5 L 7.75081205368042 33.5 L 50 3.080584526062012 L 92.24919128417969 33.5 Z" stroke="none"/>
+      <path d="M 50 6.161172866821289 L 15.50162506103516 31 L 84.49837493896484 31 L 50 6.161172866821289 M 50 0 L 100 36 L 0 36 L 50 0 Z" stroke="none" fill="#000"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="590" height="426" viewBox="0 0 590 426">
+  <defs>
+    <clipPath id="clip-focusBackground">
+      <rect width="590" height="426"/>
+    </clipPath>
+  </defs>
+  <g id="focusBackground" clip-path="url(#clip-focusBackground)">
+    <g id="Group_106" data-name="Group 106" transform="translate(-191)">
+      <g id="Group_99" data-name="Group 99" transform="translate(292 -694)" opacity="0.998">
+        <rect id="Rectangle_24" data-name="Rectangle 24" width="590" height="320" transform="translate(0 760)" fill="#9ba9a2"/>
+        <rect id="Rectangle_25" data-name="Rectangle 25" width="178" height="45" transform="translate(365 721)" fill="#9ba9a2"/>
+        <rect id="Rectangle_26" data-name="Rectangle 26" width="54" height="45" transform="translate(322 729)" fill="#9ba9a2"/>
+        <rect id="Rectangle_31" data-name="Rectangle 31" width="109" height="85" transform="translate(-105 738)" fill="#9ba9a2"/>
+        <rect id="Rectangle_32" data-name="Rectangle 32" width="93" height="25" transform="translate(-104.472 715.88) rotate(9)" fill="#9ba9a2"/>
+        <rect id="Rectangle_27" data-name="Rectangle 27" width="56.343" height="45" transform="translate(544.247 724.311) rotate(18)" fill="#9ba9a2"/>
+        <path id="Polygon_5" data-name="Polygon 5" d="M46.552,0,93.1,91H0Z" transform="translate(-46.109 771.503) rotate(-49)" fill="#9ba9a2"/>
+        <path id="Polygon_6" data-name="Polygon 6" d="M46.552,0,93.1,212.041H0Z" transform="translate(356.083 682.81) rotate(67)" fill="#9ba9a2"/>
+      </g>
+      <g id="Group_98" data-name="Group 98" transform="translate(191 -642)" opacity="0.997">
+        <rect id="Rectangle_24-2" data-name="Rectangle 24" width="590" height="320" transform="translate(0 760)" fill="#315748"/>
+        <rect id="Rectangle_25-2" data-name="Rectangle 25" width="178" height="45" transform="translate(365 721)" fill="#315748"/>
+        <rect id="Rectangle_26-2" data-name="Rectangle 26" width="54" height="45" transform="translate(322 729)" fill="#315748"/>
+        <rect id="Rectangle_27-2" data-name="Rectangle 27" width="56.343" height="45" transform="translate(544.247 724.311) rotate(18)" fill="#315748"/>
+        <path id="Polygon_5-2" data-name="Polygon 5" d="M46.552,0,93.1,91H0Z" transform="translate(-46.109 771.503) rotate(-49)" fill="#315748"/>
+        <path id="Polygon_6-2" data-name="Polygon 6" d="M46.552,0,93.1,212.041H0Z" transform="translate(356.083 682.81) rotate(67)" fill="#315748"/>
+      </g>
+      <path id="Path_4" data-name="Path 4" d="M2766.875,2042.885c-44.762,0-90.043-6.173-128.914-23.533l-4.565-2.039,4.078-9.131,4.565,2.039c91.738,40.971,221.662,17.411,290.944-.279,105.744-27,237.091-26.884,299.025.265l4.579,2.007-4.015,9.159-4.579-2.007c-60.166-26.374-188.664-26.258-292.536.265C2893.93,2030.235,2830.939,2042.884,2766.875,2042.885Z" transform="translate(-2449 -1919)" fill="#315748"/>
+      <path id="Path_27" data-name="Path 27" d="M2766.875,2042.885c-44.762,0-90.043-6.173-128.914-23.533l-4.565-2.039,4.078-9.131,4.565,2.039c91.738,40.971,221.662,17.411,290.944-.279,105.744-27,237.091-26.884,299.025.265l4.579,2.007-4.015,9.159-4.579-2.007c-60.166-26.374-188.664-26.258-292.536.265C2893.93,2030.235,2830.939,2042.884,2766.875,2042.885Z" transform="translate(-2348 -1971)" fill="#9ba9a2"/>
+      <path id="Path_28" data-name="Path 28" d="M2766.875,2042.885c-44.762,0-90.043-6.173-128.914-23.533l-4.565-2.039,4.078-9.131,4.565,2.039c91.738,40.971,221.662,17.411,290.944-.279,105.744-27,237.091-26.884,299.025.265l4.579,2.007-4.015,9.159-4.579-2.007c-60.166-26.374-188.664-26.258-292.536.265C2893.93,2030.235,2830.939,2042.884,2766.875,2042.885Z" transform="translate(-2938 -1971)" fill="#9ba9a2"/>
+    </g>
+  </g>
+</svg>

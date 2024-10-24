@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <clipPath id="clip-happinessImage">
+      <rect width="300" height="300"/>
+    </clipPath>
+  </defs>
+  <g id="happinessImage" clip-path="url(#clip-happinessImage)">
+    <circle id="Ellipse_45" data-name="Ellipse 45" cx="150" cy="150" r="150" fill="#fed18c"/>
+    <path id="Path_117" data-name="Path 117" d="M7358.864,1096.693c-23.453-11.385-36.35-24.691-49.286-50.847l8.964-4.433c11.965,24.193,23.242,35.873,44.689,46.285Z" transform="translate(-7266 -846)" fill="#e09e38"/>
+    <g id="Group_173" data-name="Group 173">
+      <path id="Line_29" data-name="Line 29" d="M0,17.251a7.5,7.5,0,0,1-7.5-7.5V0A7.5,7.5,0,0,1,0-7.5,7.5,7.5,0,0,1,7.5,0V9.751A7.5,7.5,0,0,1,0,17.251Z" transform="translate(94.5 109.749)"/>
+      <path id="Line_30" data-name="Line 30" d="M0,17.251a7.5,7.5,0,0,1-7.5-7.5V0A7.5,7.5,0,0,1,0-7.5,7.5,7.5,0,0,1,7.5,0V9.751A7.5,7.5,0,0,1,0,17.251Z" transform="translate(205.5 109.749)"/>
+    </g>
+    <path id="Path_119" data-name="Path 119" d="M8663.876,1115.191c-12.093,0-24.182-5.51-35.205-16.533a7.5,7.5,0,0,1,10.607-10.607c20.332,20.331,37.975,11.221,49.2,0a7.5,7.5,0,0,1,10.607,10.607C8688.061,1109.679,8675.966,1115.191,8663.876,1115.191Z" transform="translate(-8513.877 -933.355)" fill="#101010"/>
+  </g>
+</svg>

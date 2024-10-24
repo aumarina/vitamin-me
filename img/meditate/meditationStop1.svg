@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-meditationStop1">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="meditationStop1" clip-path="url(#clip-meditationStop1)">
+    <rect id="Rectangle_19" data-name="Rectangle 19" width="100" height="100" fill="#fff"/>
+    <path id="Rectangle_19_-_Outline" data-name="Rectangle 19 - Outline" d="M5,5V95H95V5H5M0,0H100V100H0Z"/>
+  </g>
+</svg>

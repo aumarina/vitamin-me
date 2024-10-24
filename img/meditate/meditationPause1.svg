@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-meditationPause1">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="meditationPause1" clip-path="url(#clip-meditationPause1)">
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="22" height="100" transform="translate(7)" fill="#fff"/>
+    <path id="Rectangle_18_-_Outline" data-name="Rectangle 18 - Outline" d="M5,5V95H17V5H5M0,0H22V100H0Z" transform="translate(7)"/>
+    <rect id="Rectangle_17" data-name="Rectangle 17" width="22" height="100" transform="translate(72)" fill="#fff"/>
+    <path id="Rectangle_17_-_Outline" data-name="Rectangle 17 - Outline" d="M5,5V95H17V5H5M0,0H22V100H0Z" transform="translate(72)"/>
+  </g>
+</svg>

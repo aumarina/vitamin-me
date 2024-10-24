@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+  <defs>
+    <clipPath id="clip-play2">
+      <rect width="100" height="100"/>
+    </clipPath>
+  </defs>
+  <g id="play2" clip-path="url(#clip-play2)">
+    <g id="Polygon_4" data-name="Polygon 4" transform="translate(94) rotate(90)" fill="#fff">
+      <path d="M 95.67975616455078 84.5 L 4.320243835449219 84.5 L 50 5.017224788665771 L 95.67975616455078 84.5 Z" stroke="none"/>
+      <path d="M 50 10.03444671630859 L 8.640487670898438 82 L 91.35951232910156 82 L 50 10.03444671630859 M 50 0 L 100 87 L 0 87 L 50 0 Z" stroke="none" fill="#fff"/>
+    </g>
+  </g>
+</svg>
